@@ -1,0 +1,45 @@
+.profile-authentication-area {
+    background: linear-gradient(
+        76.8deg, #3b6afe 0%, #2da1f3 53.03%, #2ddbf3 100%);
+    z-index: 1;
+}
+
+.signin-form .sign-in-with-button a {
+    width: 100%;
+    display: block;
+    color: #248BD2;
+    border-radius: 5px;
+    border: 1px solid #D2D2D2;
+    background-color: transparent;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+    padding-top: 13px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 13px;
+    text-decoration: none;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.signin-form .sign-in-with-button a svg {
+    position: absolute;
+    margin-left: -25px;
+    margin-left: -25px;
+    margin-top: -2px;
+}
+
+.signin-form .sign-in-with-button a:hover {
+    color: var(--blackColor);
+    background-color: #E9E9E9;
+}
+
+@media only screen and (max-width: 767px) {
+    .signin-form .sign-in-with-button a {
+        padding-bottom: 12px;
+    }
+
+    .signin-form .sign-in-with-button a svg {
+        margin-top: 0;
+    }
+}

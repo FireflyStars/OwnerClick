@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=kts_user
+      - MYSQL_PASSWORD=123321
+      - MYSQL_ROOT_USER=rootx
+      - MYSQL_ROOT_PASSWORD=123321
+      - MYSQL_DATABASE=kts
+    command:
+      - "--default-authentication-plugin=mysql_native_password"
+    restart: always
+    networks:
+      - default
+
+  kts:
+    image: kts-server
+    links:
+       - db:db
+    volumes:
+       - .:/var/www/html
+    ports:
+       - "8080:8080"
+       - "80:80"
+    networks:
+      - default
+
+
